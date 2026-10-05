@@ -11,7 +11,6 @@
 
 <title>F1 TRUTHNUKE</title>
 
-
 <style>
 
     @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;900&display=swap');
@@ -29,22 +28,23 @@
 
     body {
         margin: 0;
-
         min-height: 100vh;
 
         background: #080808;
-
         color: #f5f5f5;
 
         font-family: "Inter", Arial, sans-serif;
     }
 
 
+    /* =========================
+       HÁTTÉR
+    ========================= */
+
     body::before {
         content: "";
 
         position: fixed;
-
         inset: 0;
 
         pointer-events: none;
@@ -73,9 +73,7 @@
         border-bottom: 1px solid #292929;
 
         display: flex;
-
         align-items: center;
-
         justify-content: space-between;
     }
 
@@ -92,7 +90,6 @@
         letter-spacing: -1px;
 
         display: flex;
-
         align-items: center;
 
         gap: 10px;
@@ -108,7 +105,6 @@
 
     .logo-image {
         width: 42px;
-
         height: 38px;
 
         object-fit: cover;
@@ -137,11 +133,11 @@
     ========================= */
 
     .hero {
-        max-width: 1400px;
+        max-width: 1550px;
 
         margin: auto;
 
-        padding: 10vh 5vw 8vh;
+        padding: 10vh 4vw 8vh;
     }
 
 
@@ -161,17 +157,17 @@
 
 
     /* =========================
-       FŐCÍM + KÉP
+       FŐ RÉSZ
     ========================= */
 
     .hero-main {
         display: grid;
 
-        grid-template-columns: 1fr 600px;
+        grid-template-columns: minmax(300px, 1fr) minmax(380px, 600px) minmax(260px, 360px);
 
         align-items: center;
 
-        gap: 50px;
+        gap: 35px;
     }
 
 
@@ -185,7 +181,7 @@
 
         font-family: "Archivo Black", Impact, sans-serif;
 
-        font-size: clamp(55px, 7vw, 110px);
+        font-size: clamp(55px, 5.5vw, 100px);
 
         line-height: 0.87;
 
@@ -205,7 +201,7 @@
 
         color: #999;
 
-        font-size: 20px;
+        font-size: 19px;
 
         line-height: 1.5;
     }
@@ -217,11 +213,13 @@
 
 
     /* =========================
-       VERFISH / ELNANO KÉP
+       FŐ KÉP
     ========================= */
 
     .hero-photo {
-        width: 600px;
+        width: 100%;
+
+        max-width: 600px;
 
         height: 553px;
 
@@ -243,6 +241,116 @@
         transform: scale(1.015);
 
         filter: brightness(1.08);
+    }
+
+
+    /* =========================
+       GYORS IGAZSÁGBOMBÁK
+    ========================= */
+
+    .truth-bombs {
+        background: #111;
+
+        border: 1px solid #292929;
+
+        padding: 25px;
+
+        height: 553px;
+
+        overflow: hidden;
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    .truth-title {
+        margin: 0 0 20px;
+
+        padding-bottom: 15px;
+
+        border-bottom: 1px solid #333;
+
+        color: #fff;
+
+        font-family: "Archivo Black", Impact, sans-serif;
+
+        font-size: 25px;
+
+        line-height: 0.95;
+
+        text-transform: uppercase;
+    }
+
+
+    .truth-title span {
+        color: #e71920;
+    }
+
+
+    .bomb-list {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        overflow-y: auto;
+    }
+
+
+    .bomb {
+        display: block;
+
+        padding: 14px;
+
+        background: #181818;
+
+        border-left: 3px solid #e71920;
+
+        color: #ddd;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        font-weight: 700;
+
+        line-height: 1.35;
+
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+    }
+
+
+    .bomb:hover {
+        background: #e71920;
+
+        color: white;
+
+        transform: translateX(5px);
+    }
+
+
+    .bomb-number {
+        display: block;
+
+        margin-bottom: 5px;
+
+        color: #e71920;
+
+        font-size: 9px;
+
+        font-weight: 900;
+
+        letter-spacing: 1px;
+    }
+
+
+    .bomb:hover .bomb-number {
+        color: white;
     }
 
 
@@ -362,11 +470,11 @@
     ========================= */
 
     footer {
-        max-width: 1400px;
+        max-width: 1550px;
 
         margin: auto;
 
-        padding: 30px 5vw 45px;
+        padding: 30px 4vw 45px;
 
         border-top: 1px solid #292929;
 
@@ -388,19 +496,26 @@
        TABLET
     ========================= */
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
 
         .hero-main {
-            grid-template-columns: 1fr 450px;
-
-            gap: 35px;
+            grid-template-columns: 1fr 480px;
         }
 
 
-        .hero-photo {
-            width: 450px;
+        .truth-bombs {
+            grid-column: 1 / -1;
 
-            height: 415px;
+            height: auto;
+
+            max-height: 330px;
+        }
+
+
+        .bomb-list {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
         }
 
     }
@@ -430,7 +545,7 @@
         .hero-main {
             grid-template-columns: 1fr;
 
-            gap: 40px;
+            gap: 30px;
         }
 
 
@@ -445,8 +560,20 @@
             height: auto;
 
             max-height: 553px;
+        }
 
-            object-fit: cover;
+
+        .truth-bombs {
+            height: auto;
+
+            max-height: none;
+
+            padding: 22px;
+        }
+
+
+        .bomb-list {
+            display: flex;
         }
 
 
@@ -500,6 +627,11 @@
             min-height: 220px;
         }
 
+
+        .truth-title {
+            font-size: 22px;
+        }
+
     }
 
 </style>
@@ -550,8 +682,14 @@
 
 
 
+    <!-- =========================
+         FŐCÍM + KÉP + IGAZSÁGBOMBÁK
+    ========================= -->
+
     <div class="hero-main">
 
+
+        <!-- BAL: FŐCÍM -->
 
         <div class="hero-text">
 
@@ -570,12 +708,104 @@
 
 
 
+        <!-- KÖZÉP: KÉP -->
+
         <img
             src="images/verfish.jpg"
             alt="F1 Truthnuke"
             class="hero-photo"
             id="verfish"
         >
+
+
+
+        <!-- JOBB: GYORS IGAZSÁGBOMBÁK -->
+
+        <aside class="truth-bombs">
+
+            <h2 class="truth-title">
+                Gyors <span>igazságbombák</span>
+            </h2>
+
+
+            <div class="bomb-list">
+
+
+                <a href="#" class="bomb">
+
+                    <span class="bomb-number">
+                        001
+                    </span>
+
+                    Verstappen Sepangban is tud nyerni a
+                    3 hengeres 2001-es Suzuki Swifttel.
+
+                </a>
+
+
+                <a href="#" class="bomb">
+
+                    <span class="bomb-number">
+                        002
+                    </span>
+
+                    Norris kijelentette, hogy a pole pozíció
+                    túl közel van az első kanyarhoz.
+
+                </a>
+
+
+                <a href="#" class="bomb">
+
+                    <span class="bomb-number">
+                        003
+                    </span>
+
+                    Bottas idén is megpróbál gyors lenni.
+                    A projekt állítólag 2027-re elkészül.
+
+                </a>
+
+
+                <a href="#" class="bomb">
+
+                    <span class="bomb-number">
+                        004
+                    </span>
+
+                    Alonso bejelentette, hogy addig marad,
+                    amíg talál magánál idősebb pilótát.
+
+                </a>
+
+
+                <a href="#" class="bomb">
+
+                    <span class="bomb-number">
+                        005
+                    </span>
+
+                    Perez újra F1-es ülésért pályázik.
+                    A mezőny már most ideges.
+
+                </a>
+
+
+                <a href="#" class="bomb">
+
+                    <span class="bomb-number">
+                        006
+                    </span>
+
+                    A Ferrari stratégiai osztálya szerint
+                    minden terv tökéletesen működött.
+
+                </a>
+
+
+            </div>
+
+        </aside>
 
 
     </div>
