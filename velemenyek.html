@@ -1,149 +1,273 @@
+```html
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vélemények | F1 TRUTHNUKE</title>
+<title>Vélemények | TRUTHNUKE</title>
 
 <link rel="stylesheet" href="style.css">
 
+
 <style>
+
+/* =========================
+   OLDAL
+========================= */
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: #080808;
+
+    color: #f5f5f5;
+
+    font-family: "Inter", Arial, sans-serif;
+}
+
+
+/* =========================
+   CIKKEK
+========================= */
 
 .articles {
     margin-top: 60px;
+
     display: grid;
+
     gap: 15px;
 }
 
+
 .article {
     display: block;
+
     padding: 35px;
+
     background: #151515;
+
     border: 1px solid #292929;
 
     color: white;
+
     text-decoration: none;
 
-    transition: .2s;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
 }
+
 
 .article:hover {
     background: #e71920;
+
     transform: translateX(8px);
 }
 
+
 .article-number {
     color: #e71920;
-    font-weight: 900;
+
     font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
 }
+
 
 .article:hover .article-number {
     color: white;
 }
 
+
 .article h2 {
     margin: 15px 0 10px;
 
     font-family: "Archivo Black", Impact, sans-serif;
+
     font-size: 35px;
-    line-height: .95;
+
+    line-height: 0.95;
+
     text-transform: uppercase;
+
+    letter-spacing: -1px;
 }
+
 
 .article p {
     color: #888;
+
     margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.5;
 }
 
+
 .article:hover p {
-    color: rgba(255,255,255,.8);
+    color: rgba(255,255,255,0.8);
 }
+
+
+/* =========================
+   VISSZA
+========================= */
 
 .back {
     display: inline-block;
+
     margin-bottom: 30px;
 
     color: #aaa;
+
     text-decoration: none;
 
     font-size: 11px;
+
     font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.back:hover {
+    color: white;
+}
+
+
+/* =========================
+   MOBIL
+========================= */
+
+@media (max-width: 750px) {
+
+    .article {
+        padding: 25px;
+    }
+
+
+    .article h2 {
+        font-size: 28px;
+    }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     FEJLÉC
+========================= -->
+
 <header class="topbar">
 
-<a href="index.html" class="logo">
-F1<span>SHITPOST</span>
-</a>
+    <a href="index.html" class="logo">
+        TRUTH<span>NUKE</span>
+    </a>
+
+
+    <div class="tagline">
+        NEM HIVATALOS · NEM OBJEKTÍV · NEM IS AKAR AZ LENNI
+    </div>
 
 </header>
 
 
+
+<!-- =========================
+     FŐ TARTALOM
+========================= -->
+
 <main class="hero">
 
-<a href="index.html" class="back">
-← VISSZA A FŐOLDALRA
-</a>
 
-<div class="eyebrow">
-MENÜ 01
-</div>
-
-<h1>
-Az igazi<br>
-<span>véleményvezér</span><br>
-véleményei
-</h1>
+    <a href="index.html" class="back">
+        ← VISSZA A FŐOLDALRA
+    </a>
 
 
-<section class="articles">
+    <div class="eyebrow">
+        MENÜ 01
+    </div>
 
 
-<a href="#" class="article">
-
-<div class="article-number">
-01 · HAMAROSAN
-</div>
-
-<h2>
-Antonelli: Egy újabb túlértékelt bohóc, avagy Demon Hill 3.0 vagy Jensen Baton 2.0?
-</h2>
-
-<p>
-A Sepangi futam után ideje végre kimondani azt,
-amit mindenki gondol, csak fél leírni.
-</p>
-
-</a>
+    <h1>
+        Az igazi<br>
+        <span>véleményvezér</span><br>
+        véleményei
+    </h1>
 
 
-<a href="#" class="article">
 
-<div class="article-number">
-02 · HAMAROSAN
-</div>
+    <!-- =========================
+         CIKKEK
+    ========================= -->
 
-<h2>
-Norris még mindig nem tud autót vezetni
-</h2>
-
-<p>
-Mickey Mouse WDCből nem lesz Michael Schumacher.
-</p>
-
-</a>
+    <section class="articles">
 
 
-</section>
+        <a href="#" class="article">
+
+            <div class="article-number">
+                01 · HAMAROSAN
+            </div>
+
+
+            <h2>
+                Antonelli: Egy újabb túlértékelt bohóc,
+                avagy Demon Hill 3.0 vagy Jensen Baton 2.0?
+            </h2>
+
+
+            <p>
+                A Sepangi futam után ideje végre kimondani azt,
+                amit mindenki gondol, csak fél leírni.
+            </p>
+
+        </a>
+
+
+
+        <a href="#" class="article">
+
+            <div class="article-number">
+                02 · HAMAROSAN
+            </div>
+
+
+            <h2>
+                Norris még mindig nem tud autót vezetni
+            </h2>
+
+
+            <p>
+                Mickey Mouse WDCből nem lesz Michael Schumacher.
+            </p>
+
+        </a>
+
+
+    </section>
+
 
 </main>
 
+
 </body>
+
 </html>
+```
