@@ -5,7 +5,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>F1 TRUTHNUKE</title>
@@ -18,964 +17,34 @@
 <body>
 
 
-    <!-- =========================
-         FEJLÉC
-    ========================= -->
+<header class="topbar">
 
-    <header class="topbar">
+    <div class="nav wrap">
 
-        <div class="nav wrap">
+        <a href="index.html" class="logo">
 
-            <a href="index.html" class="logo">
-                F1<span>TRUTHNUKE</span>
-            </a>
-
-            <div class="tagline">
-                HIVATALOS · OBJEKTÍV · VITATHATATLAN · TÉNYEK
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         FŐOLDAL
-    ========================= -->
-
-    <main class="hero">
-
-
-        <!-- BAL OLDAL: FŐCÍM -->
-
-        <div class="hero-text">
-
-            <div class="eyebrow">
-                A PADDOCK LEGNAGYOBB IGAZSÁGMONDÓJA
-            </div>
-
-            <h1>
-                Aki nem olvassa<br>
-                <span>az tuti buzi</span>
-            </h1>
-
-            <p class="lead">
-                Forma–1, ahogy annak lennie kellene:
-                <strong>szűrő nélkül.</strong>
-            </p>
-
-        </div>
-
-
-        <!-- KÖZÉP: VERBOMBEN KÉP -->
-
-        <div class="hero-image">
+            F1<span>TRUTHNUKE</span>
 
             <img
                 src="images/verbomben.jpg"
-                alt="F1 TRUTHNUKE"
-                class="hero-photo"
-                id="truthImage"
+                alt="TRUTHNUKE"
+                class="logo-image"
             >
 
+        </a>
+
+
+        <div class="tagline">
+            HIVATALOS · OBJEKTÍV · VITATHATATLAN · TÉNYEK
         </div>
 
-
-        <!-- JOBB OLDAL: GYORS IGAZSÁGBOMBÁK -->
-
-        <aside class="quick-truth">
-
-            <h2>
-                Gyors <span>igazságbombák</span>
-            </h2>
-
-            <div class="truth-list">
-
-                <a href="#" class="truth-item">
-                    Verstappen Sepangban is tud nyerni a 3 hengeres 2001-es Suzuki Swifttel.
-                </a>
-
-                <a href="#" class="truth-item">
-                    Norrisnak csak egy gyorsabb McLaren kellene. Meg egy kis tehetség.
-                </a>
-
-                <a href="#" class="truth-item">
-                    Gasly továbbra is bizonyítja, hogy a rádiógomb kezelése is komoly kihívás.
-                </a>
-
-                <a href="#" class="truth-item">
-                    Ocon ott is előzésnek hívja, ahol mindenki más szerint csak útban van.
-                </a>
-
-                <a href="#" class="truth-item">
-                    Bottas és Pérez visszatérése előtt talán érdemes lenne újraindítani a Forma–1-et.
-                </a>
-
-            </div>
-
-        </aside>
-
-
-    </main>
-
-
-    <!-- =========================
-         MENÜ
-    ========================= -->
-
-    <section class="section">
-
-        <div class="wrap">
-
-            <div class="section-head">
-
-                <h2>
-                    A TRUTHNUKE MENÜ
-                </h2>
-
-                <div class="line"></div>
-
-            </div>
-
-
-            <div class="cards">
-
-
-                <!-- VÉLEMÉNYEK -->
-
-                <article class="card">
-
-                    <div class="card-top">
-
-                        <span>
-                            01
-                        </span>
-
-                        <small>
-                            VÉLEMÉNY
-                        </small>
-
-                    </div>
-
-                    <h3>
-                        Az igazi véleményvezér véleményei
-                    </h3>
-
-                    <p>
-                        Vélemények, amelyekre senki nem kérdezett rá,
-                        de mindenki meg fogja bánni, hogy elolvasta.
-                    </p>
-
-                    <a href="velemenyek.html">
-                        OLVASOM →
-                    </a>
-
-                </article>
-
-
-                <!-- FUTAMELEMZÉS -->
-
-                <article class="card">
-
-                    <div class="card-top">
-
-                        <span>
-                            02
-                        </span>
-
-                        <small>
-                            ELEMZÉS
-                        </small>
-
-                    </div>
-
-                    <h3>
-                        Futamelemzés a legkomolyabb véleményvezértől
-                    </h3>
-
-                    <p>
-                        Köridők, stratégia, káosz és teljesen
-                        indokolatlan magabiztosság.
-                    </p>
-
-                    <a href="futamelemzes.html">
-                        OLVASOM →
-                    </a>
-
-                </article>
-
-
-                <!-- HAMAROSAN -->
-
-                <article class="card">
-
-                    <div class="card-top">
-
-                        <span>
-                            03
-                        </span>
-
-                        <small>
-                            HAMAROSAN
-                        </small>
-
-                    </div>
-
-                    <h3>
-                        Még több teljesen objektív igazság
-                    </h3>
-
-                    <p>
-                        A szerkesztőség már dolgozik azon,
-                        hogy még több pilótát lehessen indokolatlanul kiosztani.
-                    </p>
-
-                    <a href="#">
-                        HAMAROSAN →
-                    </a>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-        <div class="wrap footer-inner">
-
-            <span>
-                © 2026 F1 TRUTHNUKE
-            </span>
-
-            <span>
-                <strong>100% objektivitás</strong> · 100% vélemény
-            </span>
-
-        </div>
-
-    </footer>
-
-
-    <!-- =========================
-         KÉP CSERE
-    ========================= -->
-
-    <script>
-
-        const truthImage = document.getElementById("truthImage");
-
-        let isGif = false;
-
-        truthImage.addEventListener("click", function () {
-
-            if (isGif) {
-
-                truthImage.src = "images/verbomben.jpg";
-
-                isGif = false;
-
-            } else {
-
-                truthImage.src = "images/elnano.gif";
-
-                isGif = true;
-
-            }
-
-        });
-
-    </script>
-
-
-</body>
-
-</html>
-```
-<!DOCTYPE html>
-
-<html lang="hu">
-
-<head>
-
-```
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>F1 TRUTHNUKE</title>
-
-<style>
-
-    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;900&display=swap');
-
-
-    * {
-        box-sizing: border-box;
-    }
-
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-
-    body {
-        margin: 0;
-        min-height: 100vh;
-
-        background: #080808;
-        color: #f5f5f5;
-
-        font-family: "Inter", Arial, sans-serif;
-    }
-
-
-    /* =========================
-       HÁTTÉR
-    ========================= */
-
-    body::before {
-        content: "";
-
-        position: fixed;
-        inset: 0;
-
-        pointer-events: none;
-
-        opacity: 0.035;
-
-        background:
-            repeating-linear-gradient(
-                0deg,
-                transparent 0px,
-                transparent 3px,
-                white 4px
-            );
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    .topbar {
-        height: 82px;
-
-        padding: 0 5vw;
-
-        border-bottom: 1px solid #292929;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-
-    .logo {
-        color: white;
-
-        text-decoration: none;
-
-        font-family: "Archivo Black", Impact, sans-serif;
-
-        font-size: 25px;
-
-        letter-spacing: -1px;
-
-        display: flex;
-        align-items: center;
-
-        gap: 10px;
-    }
-
-
-    .logo span {
-        color: #e71920;
-
-        margin-left: 5px;
-    }
-
-
-    .logo-image {
-        width: 42px;
-        height: 38px;
-
-        object-fit: cover;
-
-        display: block;
-
-        border: 1px solid #292929;
-
-        border-radius: 2px;
-    }
-
-
-    .tagline {
-        color: #666;
-
-        font-size: 10px;
-
-        font-weight: 900;
-
-        letter-spacing: 1.5px;
-    }
-
-
-    /* =========================
-       FŐOLDAL
-    ========================= */
-
-    .hero {
-        max-width: 1550px;
-
-        margin: auto;
-
-        padding: 10vh 4vw 8vh;
-    }
-
-
-    .eyebrow {
-        color: #e71920;
-
-        margin-bottom: 25px;
-
-        font-size: 11px;
-
-        font-weight: 900;
-
-        letter-spacing: 2px;
-
-        text-transform: uppercase;
-    }
-
-
-    /* =========================
-       FŐ RÉSZ
-    ========================= */
-
-    .hero-main {
-        display: grid;
-
-        grid-template-columns: minmax(300px, 1fr) minmax(380px, 600px) minmax(260px, 360px);
-
-        align-items: center;
-
-        gap: 35px;
-    }
-
-
-    .hero-text {
-        min-width: 0;
-    }
-
-
-    h1 {
-        margin: 0;
-
-        font-family: "Archivo Black", Impact, sans-serif;
-
-        font-size: clamp(55px, 5.5vw, 100px);
-
-        line-height: 0.87;
-
-        letter-spacing: -6px;
-
-        text-transform: uppercase;
-    }
-
-
-    h1 span {
-        color: #e71920;
-    }
-
-
-    .intro {
-        margin: 35px 0 0;
-
-        color: #999;
-
-        font-size: 19px;
-
-        line-height: 1.5;
-    }
-
-
-    .intro strong {
-        color: white;
-    }
-
-
-    /* =========================
-       FŐ KÉP
-    ========================= */
-
-    .hero-photo {
-        width: 100%;
-
-        max-width: 600px;
-
-        height: 553px;
-
-        object-fit: cover;
-
-        display: block;
-
-        border: 1px solid #292929;
-
-        cursor: pointer;
-
-        transition:
-            transform 0.25s ease,
-            filter 0.25s ease;
-    }
-
-
-    .hero-photo:hover {
-        transform: scale(1.015);
-
-        filter: brightness(1.08);
-    }
-
-
-    /* =========================
-       GYORS IGAZSÁGBOMBÁK
-    ========================= */
-
-    .truth-bombs {
-        background: #111;
-
-        border: 1px solid #292929;
-
-        padding: 25px;
-
-        height: 553px;
-
-        overflow: hidden;
-
-        display: flex;
-
-        flex-direction: column;
-    }
-
-
-    .truth-title {
-        margin: 0 0 20px;
-
-        padding-bottom: 15px;
-
-        border-bottom: 1px solid #333;
-
-        color: #fff;
-
-        font-family: "Archivo Black", Impact, sans-serif;
-
-        font-size: 25px;
-
-        line-height: 0.95;
-
-        text-transform: uppercase;
-    }
-
-
-    .truth-title span {
-        color: #e71920;
-    }
-
-
-    .bomb-list {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 10px;
-
-        overflow-y: auto;
-    }
-
-
-    .bomb {
-        display: block;
-
-        padding: 14px;
-
-        background: #181818;
-
-        border-left: 3px solid #e71920;
-
-        color: #ddd;
-
-        text-decoration: none;
-
-        font-size: 13px;
-
-        font-weight: 700;
-
-        line-height: 1.35;
-
-        transition:
-            background 0.2s ease,
-            transform 0.2s ease;
-    }
-
-
-    .bomb:hover {
-        background: #e71920;
-
-        color: white;
-
-        transform: translateX(5px);
-    }
-
-
-    .bomb-number {
-        display: block;
-
-        margin-bottom: 5px;
-
-        color: #e71920;
-
-        font-size: 9px;
-
-        font-weight: 900;
-
-        letter-spacing: 1px;
-    }
-
-
-    .bomb:hover .bomb-number {
-        color: white;
-    }
-
-
-    /* =========================
-       MENÜ
-    ========================= */
-
-    .menu {
-        margin-top: 65px;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 15px;
-    }
-
-
-    .menu-card {
-        min-height: 300px;
-
-        padding: 30px;
-
-        position: relative;
-
-        overflow: hidden;
-
-        color: white;
-
-        text-decoration: none;
-
-        display: flex;
-
-        flex-direction: column;
-
-        justify-content: space-between;
-
-        transition:
-            transform 0.2s ease,
-            filter 0.2s ease;
-    }
-
-
-    .menu-card:hover {
-        transform: translateY(-7px);
-
-        filter: brightness(1.12);
-    }
-
-
-    .menu-card.red {
-        background: #e71920;
-    }
-
-
-    .menu-card.black {
-        background: #151515;
-
-        border: 1px solid #333;
-    }
-
-
-    .card-number {
-        font-size: 13px;
-
-        font-weight: 900;
-
-        opacity: 0.65;
-    }
-
-
-    .card-content h2 {
-        max-width: 650px;
-
-        margin: 0 0 18px;
-
-        font-family: "Archivo Black", Impact, sans-serif;
-
-        font-size: clamp(27px, 3vw, 44px);
-
-        line-height: 0.95;
-
-        letter-spacing: -2px;
-
-        text-transform: uppercase;
-    }
-
-
-    .card-content p {
-        max-width: 560px;
-
-        margin: 0;
-
-        color: rgba(255,255,255,0.7);
-
-        font-size: 15px;
-
-        line-height: 1.5;
-    }
-
-
-    .arrow {
-        position: absolute;
-
-        right: 25px;
-
-        bottom: 15px;
-
-        font-size: 45px;
-
-        font-weight: 900;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-        max-width: 1550px;
-
-        margin: auto;
-
-        padding: 30px 4vw 45px;
-
-        border-top: 1px solid #292929;
-
-        display: flex;
-
-        justify-content: space-between;
-
-        color: #555;
-
-        font-size: 10px;
-
-        font-weight: 900;
-
-        letter-spacing: 1px;
-    }
-
-
-    /* =========================
-       TABLET
-    ========================= */
-
-    @media (max-width: 1200px) {
-
-        .hero-main {
-            grid-template-columns: 1fr 480px;
-        }
-
-
-        .truth-bombs {
-            grid-column: 1 / -1;
-
-            height: auto;
-
-            max-height: 330px;
-        }
-
-
-        .bomb-list {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-        }
-
-    }
-
-
-    /* =========================
-       MOBIL
-    ========================= */
-
-    @media (max-width: 750px) {
-
-        .topbar {
-            height: 68px;
-        }
-
-
-        .tagline {
-            display: none;
-        }
-
-
-        .hero {
-            padding-top: 8vh;
-        }
-
-
-        .hero-main {
-            grid-template-columns: 1fr;
-
-            gap: 30px;
-        }
-
-
-        h1 {
-            letter-spacing: -3px;
-        }
-
-
-        .hero-photo {
-            width: 100%;
-
-            height: auto;
-
-            max-height: 553px;
-        }
-
-
-        .truth-bombs {
-            height: auto;
-
-            max-height: none;
-
-            padding: 22px;
-        }
-
-
-        .bomb-list {
-            display: flex;
-        }
-
-
-        .menu {
-            grid-template-columns: 1fr;
-
-            margin-top: 45px;
-        }
-
-
-        .menu-card {
-            min-height: 240px;
-        }
-
-
-        .card-content h2 {
-            font-size: 30px;
-        }
-
-
-        footer {
-            flex-direction: column;
-
-            gap: 10px;
-        }
-
-    }
-
-
-    /* =========================
-       KIS MOBIL
-    ========================= */
-
-    @media (max-width: 450px) {
-
-        h1 {
-            font-size: 50px;
-
-            letter-spacing: -2px;
-        }
-
-
-        .hero-photo {
-            max-height: 420px;
-        }
-
-
-        .menu-card {
-            padding: 25px;
-
-            min-height: 220px;
-        }
-
-
-        .truth-title {
-            font-size: 22px;
-        }
-
-    }
-
-</style>
-```
-
-</head>
-
-<body>
-
-```
-<!-- =========================
-     FEJLÉC
-========================= -->
-
-<header class="topbar">
-
-    <a href="index.html" class="logo">
-
-        F1<span>TRUTHNUKE</span>
-
-        <img
-            src="images/verbomben.jpg"
-            alt="TRUTHNUKE"
-            class="logo-image"
-        >
-
-    </a>
-
-
-    <div class="tagline">
-        HIVATALOS · OBJEKTÍV · VITATHATATLAN · TÉNYEK
     </div>
 
 </header>
 
 
 
-<!-- =========================
-     FŐ TARTALOM
-========================= -->
-
-<main class="hero">
+<main class="hero wrap">
 
 
     <div class="eyebrow">
@@ -983,15 +52,12 @@
     </div>
 
 
-
-    <!-- =========================
-         FŐCÍM + KÉP + IGAZSÁGBOMBÁK
-    ========================= -->
-
     <div class="hero-main">
 
 
-        <!-- BAL: FŐCÍM -->
+        <!-- =========================
+             BAL OLDAL
+        ========================= -->
 
         <div class="hero-text">
 
@@ -1010,18 +76,26 @@
 
 
 
-        <!-- KÖZÉP: KÉP -->
+        <!-- =========================
+             KÖZÉPSŐ KÉP
+        ========================= -->
 
-        <img
-            src="images/verfish.jpg"
-            alt="F1 Truthnuke"
-            class="hero-photo"
-            id="verfish"
-        >
+        <div class="hero-image">
+
+            <img
+                src="images/verfish.jpg"
+                alt="F1 TRUTHNUKE"
+                class="hero-photo"
+                id="truthImage"
+            >
+
+        </div>
 
 
 
-        <!-- JOBB: GYORS IGAZSÁGBOMBÁK -->
+        <!-- =========================
+             JOBB OLDAL
+        ========================= -->
 
         <aside class="truth-bombs">
 
@@ -1039,8 +113,8 @@
                         001
                     </span>
 
-                    Verstappen Sepangban is tud nyerni a
-                    3 hengeres 2001-es Suzuki Swifttel.
+                    Verstappen Sepangban is tud nyerni
+                    a 3 hengeres 2001-es Suzuki Swifttel.
 
                 </a>
 
@@ -1051,8 +125,8 @@
                         002
                     </span>
 
-                    Norris kijelentette, hogy a pole pozíció
-                    túl közel van az első kanyarhoz.
+                    Norrisnak csak egy gyorsabb McLaren
+                    kellene. Meg egy kis tehetség.
 
                 </a>
 
@@ -1075,8 +149,8 @@
                         004
                     </span>
 
-                    Alonso bejelentette, hogy addig marad,
-                    amíg talál magánál idősebb pilótát.
+                    Alonso addig marad, amíg talál magánál
+                    idősebb pilótát.
 
                 </a>
 
@@ -1193,50 +267,54 @@
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 
-    <span>
-        © 2026 F1 TRUTHNUKE
-    </span>
+    <div class="wrap footer-inner">
+
+        <span>
+            © 2026 F1 TRUTHNUKE
+        </span>
 
 
-    <span>
-        100% objektivitás · 100% vélemény
-    </span>
+        <span>
+            <strong>100% objektivitás</strong> · 100% vélemény
+        </span>
+
+    </div>
 
 </footer>
 
 
 
-<!-- =========================
-     KÉP KATTINTÁS
-========================= -->
-
 <script>
 
-    const verfish = document.getElementById("verfish");
+const truthImage = document.getElementById("truthImage");
 
-    verfish.addEventListener("click", function () {
+let isGif = false;
 
-        if (verfish.src.includes("verfish.jpg")) {
 
-            verfish.src = "images/elnano.gif";
+truthImage.addEventListener("click", function () {
 
-        } else {
+    if (isGif) {
 
-            verfish.src = "images/verfish.jpg";
+        truthImage.src = "images/verfish.jpg";
 
-        }
+        isGif = false;
 
-    });
+    } else {
+
+        truthImage.src = "images/elnano.gif";
+
+        isGif = true;
+
+    }
+
+});
 
 </script>
-```
+
 
 </body>
 
 </html>
+```
