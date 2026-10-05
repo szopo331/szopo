@@ -1,3 +1,305 @@
+```html
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>F1 TRUTHNUKE</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         FEJLÉC
+    ========================= -->
+
+    <header class="topbar">
+
+        <div class="nav wrap">
+
+            <a href="index.html" class="logo">
+                F1<span>TRUTHNUKE</span>
+            </a>
+
+            <div class="tagline">
+                HIVATALOS · OBJEKTÍV · VITATHATATLAN · TÉNYEK
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         FŐOLDAL
+    ========================= -->
+
+    <main class="hero">
+
+
+        <!-- BAL OLDAL: FŐCÍM -->
+
+        <div class="hero-text">
+
+            <div class="eyebrow">
+                A PADDOCK LEGNAGYOBB IGAZSÁGMONDÓJA
+            </div>
+
+            <h1>
+                Aki nem olvassa<br>
+                <span>az tuti buzi</span>
+            </h1>
+
+            <p class="lead">
+                Forma–1, ahogy annak lennie kellene:
+                <strong>szűrő nélkül.</strong>
+            </p>
+
+        </div>
+
+
+        <!-- KÖZÉP: VERBOMBEN KÉP -->
+
+        <div class="hero-image">
+
+            <img
+                src="images/verbomben.jpg"
+                alt="F1 TRUTHNUKE"
+                class="hero-photo"
+                id="truthImage"
+            >
+
+        </div>
+
+
+        <!-- JOBB OLDAL: GYORS IGAZSÁGBOMBÁK -->
+
+        <aside class="quick-truth">
+
+            <h2>
+                Gyors <span>igazságbombák</span>
+            </h2>
+
+            <div class="truth-list">
+
+                <a href="#" class="truth-item">
+                    Verstappen Sepangban is tud nyerni a 3 hengeres 2001-es Suzuki Swifttel.
+                </a>
+
+                <a href="#" class="truth-item">
+                    Norrisnak csak egy gyorsabb McLaren kellene. Meg egy kis tehetség.
+                </a>
+
+                <a href="#" class="truth-item">
+                    Gasly továbbra is bizonyítja, hogy a rádiógomb kezelése is komoly kihívás.
+                </a>
+
+                <a href="#" class="truth-item">
+                    Ocon ott is előzésnek hívja, ahol mindenki más szerint csak útban van.
+                </a>
+
+                <a href="#" class="truth-item">
+                    Bottas és Pérez visszatérése előtt talán érdemes lenne újraindítani a Forma–1-et.
+                </a>
+
+            </div>
+
+        </aside>
+
+
+    </main>
+
+
+    <!-- =========================
+         MENÜ
+    ========================= -->
+
+    <section class="section">
+
+        <div class="wrap">
+
+            <div class="section-head">
+
+                <h2>
+                    A TRUTHNUKE MENÜ
+                </h2>
+
+                <div class="line"></div>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- VÉLEMÉNYEK -->
+
+                <article class="card">
+
+                    <div class="card-top">
+
+                        <span>
+                            01
+                        </span>
+
+                        <small>
+                            VÉLEMÉNY
+                        </small>
+
+                    </div>
+
+                    <h3>
+                        Az igazi véleményvezér véleményei
+                    </h3>
+
+                    <p>
+                        Vélemények, amelyekre senki nem kérdezett rá,
+                        de mindenki meg fogja bánni, hogy elolvasta.
+                    </p>
+
+                    <a href="velemenyek.html">
+                        OLVASOM →
+                    </a>
+
+                </article>
+
+
+                <!-- FUTAMELEMZÉS -->
+
+                <article class="card">
+
+                    <div class="card-top">
+
+                        <span>
+                            02
+                        </span>
+
+                        <small>
+                            ELEMZÉS
+                        </small>
+
+                    </div>
+
+                    <h3>
+                        Futamelemzés a legkomolyabb véleményvezértől
+                    </h3>
+
+                    <p>
+                        Köridők, stratégia, káosz és teljesen
+                        indokolatlan magabiztosság.
+                    </p>
+
+                    <a href="futamelemzes.html">
+                        OLVASOM →
+                    </a>
+
+                </article>
+
+
+                <!-- HAMAROSAN -->
+
+                <article class="card">
+
+                    <div class="card-top">
+
+                        <span>
+                            03
+                        </span>
+
+                        <small>
+                            HAMAROSAN
+                        </small>
+
+                    </div>
+
+                    <h3>
+                        Még több teljesen objektív igazság
+                    </h3>
+
+                    <p>
+                        A szerkesztőség már dolgozik azon,
+                        hogy még több pilótát lehessen indokolatlanul kiosztani.
+                    </p>
+
+                    <a href="#">
+                        HAMAROSAN →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="wrap footer-inner">
+
+            <span>
+                © 2026 F1 TRUTHNUKE
+            </span>
+
+            <span>
+                <strong>100% objektivitás</strong> · 100% vélemény
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         KÉP CSERE
+    ========================= -->
+
+    <script>
+
+        const truthImage = document.getElementById("truthImage");
+
+        let isGif = false;
+
+        truthImage.addEventListener("click", function () {
+
+            if (isGif) {
+
+                truthImage.src = "images/verbomben.jpg";
+
+                isGif = false;
+
+            } else {
+
+                truthImage.src = "images/elnano.gif";
+
+                isGif = true;
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
+```
 <!DOCTYPE html>
 
 <html lang="hu">
