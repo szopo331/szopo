@@ -1,107 +1,402 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Taplógáz – magyar F1 magazin. Hírek, vélemények, futamok és minden, ami Forma–1.">
-  <title>Taplógáz | F1 magyarul</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>F1 SHITPOST</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Inter, Arial, sans-serif;
+}
+
+/* háttér */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 3px,
+            white 4px
+        );
+}
+
+/* HEADER */
+
+.topbar {
+    height: 82px;
+    padding: 0 5vw;
+
+    border-bottom: 1px solid #292929;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+    font-size: 25px;
+
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #e71920;
+    margin-left: 5px;
+}
+
+.tagline {
+    color: #666;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+/* FŐOLDAL */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 12vh 5vw 8vh;
+}
+
+.eyebrow {
+    color: #e71920;
+
+    margin-bottom: 25px;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+
+    font-size: clamp(55px, 9vw, 125px);
+    line-height: 0.87;
+
+    letter-spacing: -6px;
+
+    text-transform: uppercase;
+}
+
+h1 span {
+    color: #e71920;
+}
+
+.intro {
+    margin: 35px 0 60px;
+
+    color: #999;
+
+    font-size: 20px;
+}
+
+.intro strong {
+    color: white;
+}
+
+/* MENÜ */
+
+.menu {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.menu-card {
+    min-height: 300px;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-7px);
+
+    filter: brightness(1.12);
+}
+
+.menu-card.red {
+    background: #e71920;
+}
+
+.menu-card.black {
+    background: #151515;
+
+    border: 1px solid #333;
+}
+
+.card-number {
+    font-size: 13px;
+
+    font-weight: 900;
+
+    opacity: 0.65;
+}
+
+.card-content h2 {
+    max-width: 650px;
+
+    margin: 0 0 18px;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+
+    font-size: clamp(27px, 3vw, 44px);
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    text-transform: uppercase;
+}
+
+.card-content p {
+    max-width: 560px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+.arrow {
+    position: absolute;
+
+    right: 25px;
+    bottom: 15px;
+
+    font-size: 45px;
+
+    font-weight: 900;
+}
+
+/* FOOTER */
+
+footer {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px 5vw 45px;
+
+    border-top: 1px solid #292929;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+/* MOBIL */
+
+@media (max-width: 750px) {
+
+    .topbar {
+        height: 68px;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 10vh;
+    }
+
+    h1 {
+        letter-spacing: -3px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card {
+        min-height: 240px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="wrap nav">
-      <a class="logo" href="index.html"><span>⚡</span> TAPLÓGÁZ</a>
-      <button class="menu-btn" aria-label="Menü">☰</button>
-      <nav>
-        <a href="#friss">Friss</a>
-        <a href="#cikkek">Cikkek</a>
-        <a href="#rolunk">Rólunk</a>
-      </nav>
+
+<header class="topbar">
+
+    <a href="#" class="logo">
+        F1<span>SHITPOST</span>
+    </a>
+
+    <div class="tagline">
+        NEM HIVATALOS · NEM OBJEKTÍV · NEM IS AKAR AZ LENNI
     </div>
-  </header>
 
-  <main>
-    <section class="hero wrap">
-      <div class="hero-copy">
-        <p class="eyebrow">🏁 F1 • HÍREK • VÉLEMÉNY</p>
-        <h1>Ahol a benzingőz<br><span>nem kér bocsánatot.</span></h1>
-        <p class="lead">Taplógáz – egy magyar F1-oldal azoknak, akik nem csak nézik a versenyt, hanem meg is beszélik.</p>
-        <a class="cta" href="#cikkek">Cikkek böngészése →</a>
-      </div>
-      <div class="hero-card">
-        <div class="speed">01</div>
-        <p>KIEMELT</p>
-        <h2>Versenyhétvége? Nálunk mindig van mit kibeszélni.</h2>
-        <span>Taplógáz szerkesztőség</span>
-      </div>
-    </section>
+</header>
 
-    <section id="friss" class="wrap section">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">MOST</p>
-          <h2>Friss a boxutcából</h2>
-        </div>
-        <span class="line"></span>
-      </div>
-      <article class="featured">
-        <div class="featured-number">01</div>
-        <div>
-          <span class="tag">VÉLEMÉNY</span>
-          <h3>Miért imádjuk ennyire a Forma–1-et?</h3>
-          <p>Nem csak az autókról szól. Stratégia, pszichológia, rivalizálás és az a bizonyos utolsó kör – erről szól a Taplógáz.</p>
-          <a href="cikk.html">Elolvasom →</a>
-        </div>
-      </article>
-    </section>
 
-    <section id="cikkek" class="wrap section">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">TAPLÓGÁZ</p>
-          <h2>Legújabb cikkek</h2>
-        </div>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <div class="card-top"><span>🏎️</span><small>F1</small></div>
-          <span class="tag">ELEMZÉS</span>
-          <h3>Mitől lesz jó egy versenystratégia?</h3>
-          <p>A gumik, a boxkiállások és az időzítés kulisszatitkai közérthetően.</p>
-          <a href="cikk.html">Tovább →</a>
-        </article>
-        <article class="card">
-          <div class="card-top"><span>🏁</span><small>FUTAM</small></div>
-          <span class="tag">KULISSZÁK MÖGÖTT</span>
-          <h3>Mi történik egy F1-es paddockban?</h3>
-          <p>Garázsok, mérnökök, pilóták és az a bizonyos feszült vasárnap délután.</p>
-          <a href="cikk.html">Tovább →</a>
-        </article>
-        <article class="card">
-          <div class="card-top"><span>🔥</span><small>VÉLEMÉNY</small></div>
-          <span class="tag">TAPLÓS</span>
-          <h3>Amikor a rádióbeszélgetés jobb, mint a Netflix</h3>
-          <p>Az F1 egyik legjobb része: amikor már a mérnök is kezd ideges lenni.</p>
-          <a href="cikk.html">Tovább →</a>
-        </article>
-      </div>
-    </section>
+<main class="hero">
 
-    <section id="rolunk" class="about">
-      <div class="wrap">
-        <p class="eyebrow">RÓLUNK</p>
-        <h2>Nem hivatalos. Nem unalmas.</h2>
-        <p>A Taplógáz egy rajongói F1-magazin. Hírek, elemzések, vélemények és minden, ami miatt vasárnap délután hirtelen mindenki stratégiai szakértő lesz.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-inner">
-      <strong>⚡ TAPLÓGÁZ</strong>
-      <span>F1 magyarul, sallangok nélkül.</span>
+    <div class="eyebrow">
+        A PADDOCK LEGNAGYOBB IGAZSÁGMONDÓJA
     </div>
-  </footer>
-  <script src="script.js"></script>
+
+
+    <h1>
+        Aki nem olvassa<br>
+        <span>az tuti buzi</span>
+    </h1>
+
+
+    <p class="intro">
+        Forma–1, ahogy annak lennie kellene:
+        <strong>szűrő nélkül.</strong>
+    </p>
+
+
+    <section class="menu">
+
+
+        <!-- 1. MENÜ -->
+
+        <a href="#" class="menu-card red">
+
+            <div class="card-number">
+                01
+            </div>
+
+            <div class="card-content">
+
+                <h2>
+                    Az igazi véleményvezér véleményei
+                </h2>
+
+                <p>
+                    Vélemények, amelyekre senki nem kérdezett rá,
+                    de mindenki meg fogja bánni, hogy elolvasta.
+                </p>
+
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+        <!-- 2. MENÜ -->
+
+        <a href="#" class="menu-card black">
+
+            <div class="card-number">
+                02
+            </div>
+
+            <div class="card-content">
+
+                <h2>
+                    Futamelemzés a legkomolyabb véleményvezértől
+                </h2>
+
+                <p>
+                    Köridők, stratégia, káosz és teljesen
+                    indokolatlan magabiztosság.
+                </p>
+
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <span>
+        © 2026 F1 SHITPOST
+    </span>
+
+    <span>
+        0% objektivitás · 100% vélemény
+    </span>
+
+</footer>
+
 </body>
 </html>
