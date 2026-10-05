@@ -1,29 +1,45 @@
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;900&display=swap');
 
+
 * {
     box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     margin: 0;
+
     min-height: 100vh;
+
     background: #080808;
+
     color: #f5f5f5;
+
     font-family: "Inter", Arial, sans-serif;
+
+    line-height: 1.6;
 }
 
-/* Háttér textúra */
+
+/* =========================
+   HÁTTÉR TEXTÚRA
+========================= */
 
 body::before {
     content: "";
+
     position: fixed;
+
     inset: 0;
+
     pointer-events: none;
+
     opacity: 0.035;
 
     background-image:
@@ -35,44 +51,96 @@ body::before {
         );
 }
 
+
 /* =========================
    HEADER
 ========================= */
 
 .topbar {
     height: 82px;
+
     padding: 0 5vw;
 
     border-bottom: 1px solid #292929;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
+    position: relative;
+
+    z-index: 10;
 }
+
+
+/* LOGÓ */
 
 .logo {
     color: white;
+
     text-decoration: none;
 
     font-family: "Archivo Black", Impact, sans-serif;
+
     font-size: 25px;
 
     letter-spacing: -1px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
 }
+
 
 .logo span {
     color: #e71920;
+
     margin-left: 5px;
 }
+
+
+/* ATOMROBBANÁS + F1 KÉP */
+
+.logo-image {
+    width: 52px;
+
+    height: 52px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 4px;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.logo:hover .logo-image {
+    transform: scale(1.08) rotate(-3deg);
+
+    filter: brightness(1.15);
+}
+
+
+/* FEJLÉC SZÖVEG */
 
 .tagline {
     color: #666;
 
     font-size: 10px;
+
     font-weight: 900;
 
     letter-spacing: 1.5px;
 }
+
 
 /* =========================
    FŐOLDAL
@@ -80,10 +148,12 @@ body::before {
 
 .hero {
     max-width: 1400px;
+
     margin: auto;
 
     padding: 10vh 5vw 8vh;
 }
+
 
 .eyebrow {
     color: #e71920;
@@ -91,13 +161,18 @@ body::before {
     margin-bottom: 25px;
 
     font-size: 11px;
+
     font-weight: 900;
 
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
-/* Főcím + kép */
+
+/* =========================
+   FŐCÍM + KÉP
+========================= */
 
 .hero-main {
     display: grid;
@@ -109,7 +184,15 @@ body::before {
     gap: 50px;
 }
 
-/* Főcím */
+
+.hero-text {
+    min-width: 0;
+}
+
+
+/* =========================
+   FŐCÍM
+========================= */
 
 h1 {
     margin: 0;
@@ -125,11 +208,15 @@ h1 {
     text-transform: uppercase;
 }
 
+
 h1 span {
     color: #e71920;
 }
 
-/* Bevezető szöveg */
+
+/* =========================
+   BEVEZETŐ
+========================= */
 
 .intro {
     margin: 35px 0 0;
@@ -141,9 +228,11 @@ h1 span {
     line-height: 1.5;
 }
 
+
 .intro strong {
     color: white;
 }
+
 
 /* =========================
    VERFISH KÉP
@@ -151,6 +240,7 @@ h1 span {
 
 .hero-photo {
     width: 600px;
+
     height: 553px;
 
     object-fit: cover;
@@ -164,11 +254,13 @@ h1 span {
         filter 0.25s ease;
 }
 
+
 .hero-photo:hover {
     transform: scale(1.015);
 
     filter: brightness(1.08);
 }
+
 
 /* =========================
    MENÜ
@@ -184,6 +276,7 @@ h1 span {
     gap: 15px;
 }
 
+
 .menu-card {
     min-height: 300px;
 
@@ -198,7 +291,9 @@ h1 span {
     text-decoration: none;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
 
     transition:
@@ -206,21 +301,25 @@ h1 span {
         filter 0.2s ease;
 }
 
+
 .menu-card:hover {
     transform: translateY(-7px);
 
     filter: brightness(1.12);
 }
 
+
 .menu-card.red {
     background: #e71920;
 }
+
 
 .menu-card.black {
     background: #151515;
 
     border: 1px solid #333;
 }
+
 
 .card-number {
     font-size: 13px;
@@ -229,6 +328,7 @@ h1 span {
 
     opacity: 0.65;
 }
+
 
 .card-content h2 {
     max-width: 650px;
@@ -246,6 +346,7 @@ h1 span {
     text-transform: uppercase;
 }
 
+
 .card-content p {
     max-width: 560px;
 
@@ -258,16 +359,193 @@ h1 span {
     line-height: 1.5;
 }
 
+
 .arrow {
     position: absolute;
 
     right: 25px;
+
     bottom: 15px;
 
     font-size: 45px;
 
     font-weight: 900;
 }
+
+
+/* =========================
+   ALMOLDALAK
+========================= */
+
+.page {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 11vh 5vw;
+}
+
+
+.page h1 {
+    font-size: clamp(45px, 7vw, 95px);
+
+    margin-bottom: 60px;
+}
+
+
+/* =========================
+   ÜRES / HAMAROSAN
+========================= */
+
+.empty {
+    padding: 65px 0;
+
+    border-top: 1px solid #333;
+
+    border-bottom: 1px solid #333;
+}
+
+
+.empty-symbol {
+    color: #e71920;
+
+    font-size: 55px;
+
+    font-weight: 900;
+}
+
+
+.empty h2 {
+    margin: 15px 0;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+
+    font-size: 35px;
+
+    text-transform: uppercase;
+}
+
+
+.empty p {
+    max-width: 650px;
+
+    color: #888;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   VISSZA GOMB
+========================= */
+
+.back {
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.back:hover {
+    color: white;
+}
+
+
+/* =========================
+   CIKKLISTA
+========================= */
+
+.articles {
+    margin-top: 60px;
+
+    display: grid;
+
+    gap: 15px;
+}
+
+
+.article {
+    display: block;
+
+    padding: 35px;
+
+    background: #151515;
+
+    border: 1px solid #292929;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.article:hover {
+    background: #e71920;
+
+    transform: translateX(8px);
+}
+
+
+.article-number {
+    color: #e71920;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.article:hover .article-number {
+    color: white;
+}
+
+
+.article h2 {
+    margin: 15px 0 10px;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+
+    font-size: 35px;
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+
+    letter-spacing: -1px;
+}
+
+
+.article p {
+    color: #888;
+
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+.article:hover p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 
 /* =========================
    FOOTER
@@ -295,154 +573,9 @@ footer {
     letter-spacing: 1px;
 }
 
-/* =========================
-   ALMOLDALAK
-========================= */
-
-.page {
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 11vh 5vw;
-}
-
-.page h1 {
-    font-size: clamp(45px, 7vw, 95px);
-
-    margin-bottom: 60px;
-}
-
-.empty {
-    padding: 65px 0;
-
-    border-top: 1px solid #333;
-
-    border-bottom: 1px solid #333;
-}
-
-.empty-symbol {
-    color: #e71920;
-
-    font-size: 55px;
-
-    font-weight: 900;
-}
-
-.empty h2 {
-    margin: 15px 0;
-
-    font-family: "Archivo Black", Impact, sans-serif;
-
-    font-size: 35px;
-
-    text-transform: uppercase;
-}
-
-.empty p {
-    max-width: 650px;
-
-    color: #888;
-
-    font-size: 17px;
-
-    line-height: 1.6;
-}
-
-.back {
-    display: inline-block;
-
-    margin-bottom: 30px;
-
-    color: #aaa;
-
-    text-decoration: none;
-
-    font-size: 11px;
-
-    font-weight: 900;
-
-    letter-spacing: 1px;
-}
-
-.back:hover {
-    color: white;
-}
 
 /* =========================
-   CIKKLISTA
-========================= */
-
-.articles {
-    margin-top: 60px;
-
-    display: grid;
-
-    gap: 15px;
-}
-
-.article {
-    display: block;
-
-    padding: 35px;
-
-    background: #151515;
-
-    border: 1px solid #292929;
-
-    color: white;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-}
-
-.article:hover {
-    background: #e71920;
-
-    transform: translateX(8px);
-}
-
-.article-number {
-    color: #e71920;
-
-    font-size: 12px;
-
-    font-weight: 900;
-}
-
-.article:hover .article-number {
-    color: white;
-}
-
-.article h2 {
-    margin: 15px 0 10px;
-
-    font-family: "Archivo Black", Impact, sans-serif;
-
-    font-size: 35px;
-
-    line-height: 0.95;
-
-    text-transform: uppercase;
-}
-
-.article p {
-    color: #888;
-
-    margin: 0;
-
-    line-height: 1.5;
-}
-
-.article:hover p {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* =========================
-   MOBIL
+   TABLET
 ========================= */
 
 @media (max-width: 1100px) {
@@ -453,6 +586,7 @@ footer {
         gap: 35px;
     }
 
+
     .hero-photo {
         width: 450px;
 
@@ -461,19 +595,43 @@ footer {
 
 }
 
+
+/* =========================
+   MOBIL
+========================= */
+
 @media (max-width: 750px) {
 
     .topbar {
         height: 68px;
+
+        padding: 0 4vw;
     }
+
 
     .tagline {
         display: none;
     }
 
+
+    .logo {
+        font-size: 22px;
+
+        gap: 8px;
+    }
+
+
+    .logo-image {
+        width: 45px;
+
+        height: 45px;
+    }
+
+
     .hero {
         padding-top: 8vh;
     }
+
 
     .hero-main {
         grid-template-columns: 1fr;
@@ -481,9 +639,11 @@ footer {
         gap: 40px;
     }
 
+
     h1 {
         letter-spacing: -3px;
     }
+
 
     .hero-photo {
         width: 100%;
@@ -495,19 +655,23 @@ footer {
         object-fit: cover;
     }
 
+
     .menu {
         grid-template-columns: 1fr;
 
         margin-top: 45px;
     }
 
+
     .menu-card {
         min-height: 240px;
     }
 
+
     .card-content h2 {
         font-size: 30px;
     }
+
 
     footer {
         flex-direction: column;
@@ -515,13 +679,33 @@ footer {
         gap: 10px;
     }
 
+
     .page {
         padding-top: 8vh;
     }
 
 }
 
+
+/* =========================
+   KIS MOBIL
+========================= */
+
 @media (max-width: 450px) {
+
+    .logo {
+        font-size: 20px;
+
+        gap: 6px;
+    }
+
+
+    .logo-image {
+        width: 40px;
+
+        height: 40px;
+    }
+
 
     h1 {
         font-size: 50px;
@@ -529,9 +713,11 @@ footer {
         letter-spacing: -2px;
     }
 
+
     .hero-photo {
         max-height: 420px;
     }
+
 
     .menu-card {
         padding: 25px;
@@ -539,9 +725,11 @@ footer {
         min-height: 220px;
     }
 
+
     .article {
         padding: 25px;
     }
+
 
     .article h2 {
         font-size: 27px;
@@ -549,20 +737,3 @@ footer {
 
 }
 ```
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;600;700;800&display=swap');
-
-:root{--bg:#090a0d;--panel:#111319;--text:#f4f4f2;--muted:#9b9da5;--accent:#ff3b30;--accent2:#ff7a00;--border:#24262d}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
-.wrap{width:min(1120px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(9,10,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:"Barlow Condensed",sans-serif;font-size:30px;font-weight:800;letter-spacing:.5px;color:#fff;text-decoration:none}.logo span{color:var(--accent)}
-nav{display:flex;gap:28px}nav a,.back{color:var(--muted);text-decoration:none;font-weight:700}nav a:hover,.back:hover{color:#fff}.menu-btn{display:none;background:none;border:0;color:#fff;font-size:25px}
-.hero{min-height:600px;display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:center;padding:75px 0}
-.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:2px;margin:0 0 12px}.hero h1{font-family:"Barlow Condensed",sans-serif;font-size:clamp(58px,8vw,105px);line-height:.88;text-transform:uppercase;margin:0 0 28px;letter-spacing:-2px}.hero h1 span{color:var(--accent)}
-.lead{color:var(--muted);font-size:18px;max-width:600px}.cta{display:inline-block;margin-top:20px;background:var(--accent);color:#fff;padding:14px 22px;text-decoration:none;font-weight:800;transform:skew(-5deg)}.hero-card{background:linear-gradient(145deg,#1a1d24,#0e0f13);border:1px solid var(--border);padding:40px;min-height:310px;display:flex;flex-direction:column;justify-content:end;box-shadow:20px 20px 0 #15171d}.hero-card .speed{font-family:"Barlow Condensed";font-size:110px;line-height:.8;color:var(--accent);opacity:.9}.hero-card p{font-size:12px;font-weight:800;letter-spacing:2px;color:var(--muted)}.hero-card h2{font-family:"Barlow Condensed";font-size:32px;line-height:1;margin:0 0 18px;text-transform:uppercase}.hero-card span{font-size:12px;color:var(--muted)}
-.section{padding:60px 0}.section-head{display:flex;align-items:center;gap:25px;margin-bottom:25px}.section-head h2{font-family:"Barlow Condensed";font-size:45px;text-transform:uppercase;margin:0}.line{height:1px;background:var(--border);flex:1}
-.featured{display:grid;grid-template-columns:100px 1fr;gap:25px;border:1px solid var(--border);background:var(--panel);padding:35px}.featured-number{font-family:"Barlow Condensed";font-size:70px;color:var(--accent);font-weight:800}.tag{font-size:10px;letter-spacing:1.5px;color:var(--accent);font-weight:800}.featured h3{font-family:"Barlow Condensed";font-size:42px;text-transform:uppercase;margin:7px 0}.featured p,.card p{color:var(--muted)}a{color:inherit}.featured a,.card a{color:#fff;text-decoration:none;font-weight:800}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--border);background:var(--panel);padding:25px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#444}.card-top{display:flex;justify-content:space-between;align-items:center;height:80px;margin-bottom:20px}.card-top span{font-size:45px}.card-top small{font-weight:800;color:var(--muted);letter-spacing:2px}.card h3{font-family:"Barlow Condensed";font-size:29px;line-height:1.05;text-transform:uppercase;margin:8px 0}
-.about{padding:90px 0;background:#101217;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.about h2{font-family:"Barlow Condensed";font-size:55px;text-transform:uppercase;margin:0}.about p:last-child{max-width:700px;color:var(--muted);font-size:18px}
-footer{padding:30px 0}.footer-inner{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}.footer-inner strong{color:#fff}
-.article-page{padding:70px 0 100px;max-width:900px}.article-page h1{font-family:"Barlow Condensed";font-size:clamp(55px,8vw,90px);line-height:.9;text-transform:uppercase;margin:15px 0}.article-meta{color:var(--muted);font-size:13px}.article-lead{font-size:22px;font-weight:700;border-left:4px solid var(--accent);padding:20px;margin:40px 0}.article-page p{font-size:17px;color:#d2d3d5}.article-page h2{font-family:"Barlow Condensed";font-size:38px;text-transform:uppercase;margin-top:45px}.article-page blockquote{margin:35px 0;padding:25px;background:var(--panel);font-family:"Barlow Condensed";font-size:30px;border-left:4px solid var(--accent)}
-@media(max-width:750px){nav{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr;padding:55px 0}.hero-card{min-height:250px}.cards{grid-template-columns:1fr}.featured{grid-template-columns:1fr}.featured-number{font-size:50px}.footer-inner{flex-direction:column;gap:8px}.hero h1{font-size:65px}.section-head h2{font-size:38px}}
