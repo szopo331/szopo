@@ -1,196 +1,710 @@
-```html
 <!DOCTYPE html>
+
 <html lang="hu">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>F1 TRUTHNUKE</title>
+<title>F1 TRUTHNUKE</title>
 
-    <link rel="stylesheet" href="style.css">
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;900&display=swap');
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    body {
+        margin: 0;
+
+        min-height: 100vh;
+
+        background: #080808;
+
+        color: #f5f5f5;
+
+        font-family: "Inter", Arial, sans-serif;
+    }
+
+
+    body::before {
+        content: "";
+
+        position: fixed;
+
+        inset: 0;
+
+        pointer-events: none;
+
+        opacity: 0.035;
+
+        background:
+            repeating-linear-gradient(
+                0deg,
+                transparent 0px,
+                transparent 3px,
+                white 4px
+            );
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .topbar {
+        height: 82px;
+
+        padding: 0 5vw;
+
+        border-bottom: 1px solid #292929;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+
+    .logo {
+        color: white;
+
+        text-decoration: none;
+
+        font-family: "Archivo Black", Impact, sans-serif;
+
+        font-size: 25px;
+
+        letter-spacing: -1px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+
+    .logo span {
+        color: #e71920;
+
+        margin-left: 5px;
+    }
+
+
+    .logo-image {
+        width: 42px;
+
+        height: 38px;
+
+        object-fit: cover;
+
+        display: block;
+
+        border: 1px solid #292929;
+
+        border-radius: 2px;
+    }
+
+
+    .tagline {
+        color: #666;
+
+        font-size: 10px;
+
+        font-weight: 900;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* =========================
+       FŐOLDAL
+    ========================= */
+
+    .hero {
+        max-width: 1400px;
+
+        margin: auto;
+
+        padding: 10vh 5vw 8vh;
+    }
+
+
+    .eyebrow {
+        color: #e71920;
+
+        margin-bottom: 25px;
+
+        font-size: 11px;
+
+        font-weight: 900;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================
+       FŐCÍM + KÉP
+    ========================= */
+
+    .hero-main {
+        display: grid;
+
+        grid-template-columns: 1fr 600px;
+
+        align-items: center;
+
+        gap: 50px;
+    }
+
+
+    .hero-text {
+        min-width: 0;
+    }
+
+
+    h1 {
+        margin: 0;
+
+        font-family: "Archivo Black", Impact, sans-serif;
+
+        font-size: clamp(55px, 7vw, 110px);
+
+        line-height: 0.87;
+
+        letter-spacing: -6px;
+
+        text-transform: uppercase;
+    }
+
+
+    h1 span {
+        color: #e71920;
+    }
+
+
+    .intro {
+        margin: 35px 0 0;
+
+        color: #999;
+
+        font-size: 20px;
+
+        line-height: 1.5;
+    }
+
+
+    .intro strong {
+        color: white;
+    }
+
+
+    /* =========================
+       VERFISH / ELNANO KÉP
+    ========================= */
+
+    .hero-photo {
+        width: 600px;
+
+        height: 553px;
+
+        object-fit: cover;
+
+        display: block;
+
+        border: 1px solid #292929;
+
+        cursor: pointer;
+
+        transition:
+            transform 0.25s ease,
+            filter 0.25s ease;
+    }
+
+
+    .hero-photo:hover {
+        transform: scale(1.015);
+
+        filter: brightness(1.08);
+    }
+
+
+    /* =========================
+       MENÜ
+    ========================= */
+
+    .menu {
+        margin-top: 65px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+    }
+
+
+    .menu-card {
+        min-height: 300px;
+
+        padding: 30px;
+
+        position: relative;
+
+        overflow: hidden;
+
+        color: white;
+
+        text-decoration: none;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-between;
+
+        transition:
+            transform 0.2s ease,
+            filter 0.2s ease;
+    }
+
+
+    .menu-card:hover {
+        transform: translateY(-7px);
+
+        filter: brightness(1.12);
+    }
+
+
+    .menu-card.red {
+        background: #e71920;
+    }
+
+
+    .menu-card.black {
+        background: #151515;
+
+        border: 1px solid #333;
+    }
+
+
+    .card-number {
+        font-size: 13px;
+
+        font-weight: 900;
+
+        opacity: 0.65;
+    }
+
+
+    .card-content h2 {
+        max-width: 650px;
+
+        margin: 0 0 18px;
+
+        font-family: "Archivo Black", Impact, sans-serif;
+
+        font-size: clamp(27px, 3vw, 44px);
+
+        line-height: 0.95;
+
+        letter-spacing: -2px;
+
+        text-transform: uppercase;
+    }
+
+
+    .card-content p {
+        max-width: 560px;
+
+        margin: 0;
+
+        color: rgba(255,255,255,0.7);
+
+        font-size: 15px;
+
+        line-height: 1.5;
+    }
+
+
+    .arrow {
+        position: absolute;
+
+        right: 25px;
+
+        bottom: 15px;
+
+        font-size: 45px;
+
+        font-weight: 900;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        max-width: 1400px;
+
+        margin: auto;
+
+        padding: 30px 5vw 45px;
+
+        border-top: 1px solid #292929;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        color: #555;
+
+        font-size: 10px;
+
+        font-weight: 900;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 1100px) {
+
+        .hero-main {
+            grid-template-columns: 1fr 450px;
+
+            gap: 35px;
+        }
+
+
+        .hero-photo {
+            width: 450px;
+
+            height: 415px;
+        }
+
+    }
+
+
+    /* =========================
+       MOBIL
+    ========================= */
+
+    @media (max-width: 750px) {
+
+        .topbar {
+            height: 68px;
+        }
+
+
+        .tagline {
+            display: none;
+        }
+
+
+        .hero {
+            padding-top: 8vh;
+        }
+
+
+        .hero-main {
+            grid-template-columns: 1fr;
+
+            gap: 40px;
+        }
+
+
+        h1 {
+            letter-spacing: -3px;
+        }
+
+
+        .hero-photo {
+            width: 100%;
+
+            height: auto;
+
+            max-height: 553px;
+
+            object-fit: cover;
+        }
+
+
+        .menu {
+            grid-template-columns: 1fr;
+
+            margin-top: 45px;
+        }
+
+
+        .menu-card {
+            min-height: 240px;
+        }
+
+
+        .card-content h2 {
+            font-size: 30px;
+        }
+
+
+        footer {
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+    }
+
+
+    /* =========================
+       KIS MOBIL
+    ========================= */
+
+    @media (max-width: 450px) {
+
+        h1 {
+            font-size: 50px;
+
+            letter-spacing: -2px;
+        }
+
+
+        .hero-photo {
+            max-height: 420px;
+        }
+
+
+        .menu-card {
+            padding: 25px;
+
+            min-height: 220px;
+        }
+
+    }
+
+</style>
+```
 
 </head>
 
-
 <body>
 
+```
+<!-- =========================
+     FEJLÉC
+========================= -->
 
-    <!-- =========================
-         FEJLÉC
-    ========================= -->
+<header class="topbar">
 
-    <header class="topbar">
+    <a href="index.html" class="logo">
 
-        <a href="index.html" class="logo">
+        F1<span>TRUTHNUKE</span>
 
-            F1<span>TRUTHNUKE</span>
+        <img
+            src="images/verbomben.jpg"
+            alt="TRUTHNUKE"
+            class="logo-image"
+        >
 
-            <img
-                src="images/verbomben.jpg"
-                alt="TRUTHNUKE"
-                class="logo-image"
-            >
-
-        </a>
+    </a>
 
 
-        <div class="tagline">
-            HIVATALOS · OBJEKTÍV · VITATHATATLAN · TÉNYEK
+    <div class="tagline">
+        HIVATALOS · OBJEKTÍV · VITATHATATLAN · TÉNYEK
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     FŐ TARTALOM
+========================= -->
+
+<main class="hero">
+
+
+    <div class="eyebrow">
+        A PADDOCK LEGNAGYOBB IGAZSÁGMONDÓJA
+    </div>
+
+
+
+    <div class="hero-main">
+
+
+        <div class="hero-text">
+
+            <h1>
+                Aki nem olvassa<br>
+                <span>az tuti buzi</span>
+            </h1>
+
+
+            <p class="intro">
+                Forma–1, ahogy annak lennie kellene:
+                <strong>szűrő nélkül.</strong>
+            </p>
+
         </div>
 
-    </header>
+
+
+        <img
+            src="images/verfish.jpg"
+            alt="F1 Truthnuke"
+            class="hero-photo"
+            id="verfish"
+        >
+
+
+    </div>
 
 
 
     <!-- =========================
-         FŐ TARTALOM
+         MENÜ
     ========================= -->
 
-    <main class="hero">
+    <section class="menu">
 
 
-        <div class="eyebrow">
-            A PADDOCK LEGNAGYOBB IGAZSÁGMONDÓJA
-        </div>
+        <a
+            href="velemenyek.html"
+            class="menu-card red"
+        >
+
+            <div class="card-number">
+                01
+            </div>
 
 
-        <!-- FŐCÍM + NAGY KÉP -->
+            <div class="card-content">
 
-        <div class="hero-main">
-
-
-            <div class="hero-text">
-
-                <h1>
-                    Aki nem olvassa<br>
-                    <span>az tuti buzi</span>
-                </h1>
+                <h2>
+                    Az igazi véleményvezér véleményei
+                </h2>
 
 
-                <p class="intro">
-                    Forma–1, ahogy annak lennie kellene:
-                    <strong>szűrő nélkül.</strong>
+                <p>
+                    Vélemények, amelyekre senki nem kérdezett rá,
+                    de mindenki meg fogja bánni, hogy elolvasta.
                 </p>
 
             </div>
 
 
-            <img
-                src="images/verfish.jpg"
-                alt="F1 Truthnuke"
-                class="hero-photo"
-            >
+            <div class="arrow">
+                →
+            </div>
 
-
-        </div>
+        </a>
 
 
 
-        <!-- =========================
-             MENÜ
-        ========================= -->
+        <a
+            href="futamelemzes.html"
+            class="menu-card black"
+        >
 
-        <section class="menu">
-
-
-            <!-- VÉLEMÉNYEK -->
-
-            <a
-                href="velemenyek.html"
-                class="menu-card red"
-            >
-
-                <div class="card-number">
-                    01
-                </div>
+            <div class="card-number">
+                02
+            </div>
 
 
-                <div class="card-content">
+            <div class="card-content">
 
-                    <h2>
-                        Az igazi véleményvezér véleményei
-                    </h2>
-
-
-                    <p>
-                        Vélemények, amelyekre senki nem kérdezett rá,
-                        de mindenki meg fogja bánni, hogy elolvasta.
-                    </p>
-
-                </div>
+                <h2>
+                    Futamelemzés a legkomolyabb véleményvezértől
+                </h2>
 
 
-                <div class="arrow">
-                    →
-                </div>
+                <p>
+                    Köridők, stratégia, káosz és teljesen
+                    indokolatlan magabiztosság.
+                </p>
 
-            </a>
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+    </section>
+
+
+</main>
 
 
 
-            <!-- FUTAMELEMZÉS -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-            <a
-                href="futamelemzes.html"
-                class="menu-card black"
-            >
+<footer>
 
-                <div class="card-number">
-                    02
-                </div>
-
-
-                <div class="card-content">
-
-                    <h2>
-                        Futamelemzés a legkomolyabb véleményvezértől
-                    </h2>
+    <span>
+        © 2026 F1 TRUTHNUKE
+    </span>
 
 
-                    <p>
-                        Köridők, stratégia, káosz és teljesen
-                        indokolatlan magabiztosság.
-                    </p>
+    <span>
+        100% objektivitás · 100% vélemény
+    </span>
 
-                </div>
-
-
-                <div class="arrow">
-                    →
-                </div>
-
-            </a>
-
-
-        </section>
-
-
-    </main>
+</footer>
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+<!-- =========================
+     KÉP KATTINTÁS
+========================= -->
 
-    <footer>
+<script>
 
-        <span>
-            © 2026 F1 TRUTHNUKE
-        </span>
+    const verfish = document.getElementById("verfish");
 
+    verfish.addEventListener("click", function () {
 
-        <span>
-            100% objektivitás · 100% vélemény
-        </span>
+        if (verfish.src.includes("verfish.jpg")) {
 
-    </footer>
+            verfish.src = "images/elnano.gif";
 
+        } else {
+
+            verfish.src = "images/verfish.jpg";
+
+        }
+
+    });
+
+</script>
+```
 
 </body>
 
 </html>
-```
