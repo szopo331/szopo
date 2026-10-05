@@ -1,415 +1,662 @@
+```html
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>F1 SHITPOST</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;900&display=swap');
+    <title>F1 SHITPOST</title>
 
-* {
-    box-sizing: border-box;
-}
 
-html {
-    scroll-behavior: smooth;
-}
+    <style>
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: #080808;
-    color: #f5f5f5;
-    font-family: Inter, Arial, sans-serif;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;900&display=swap');
 
-/* háttér */
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.035;
+        * {
+            box-sizing: border-box;
+        }
 
-    background:
-        repeating-linear-gradient(
-            0deg,
-            transparent 0px,
-            transparent 3px,
-            white 4px
-        );
-}
 
-/* HEADER */
+        html {
+            scroll-behavior: smooth;
+        }
 
-.topbar {
-    height: 82px;
-    padding: 0 5vw;
 
-    border-bottom: 1px solid #292929;
+        body {
+            margin: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+            min-height: 100vh;
 
-.logo {
-    color: white;
-    text-decoration: none;
+            background: #080808;
 
-    font-family: "Archivo Black", Impact, sans-serif;
-    font-size: 25px;
+            color: #f5f5f5;
 
-    letter-spacing: -1px;
-}
+            font-family: "Inter", Arial, sans-serif;
+        }
 
-.logo span {
-    color: #e71920;
-    margin-left: 5px;
-}
 
-.tagline {
-    color: #666;
+        /* =========================
+           HÁTTÉR
+        ========================= */
 
-    font-size: 10px;
-    font-weight: 900;
+        body::before {
+            content: "";
 
-    letter-spacing: 1.5px;
-}
+            position: fixed;
 
-/* FŐOLDAL */
+            inset: 0;
 
-.hero {
-    max-width: 1200px;
-    margin: auto;
+            pointer-events: none;
 
-    padding: 12vh 5vw 8vh;
-}
+            opacity: 0.035;
 
-.eyebrow {
-    color: #e71920;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 3px,
+                    white 4px
+                );
+        }
 
-    margin-bottom: 25px;
 
-    font-size: 11px;
-    font-weight: 900;
+        /* =========================
+           HEADER
+        ========================= */
 
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+        .topbar {
+            height: 82px;
 
-h1 {
-    margin: 0;
+            padding: 0 5vw;
 
-    font-family: "Archivo Black", Impact, sans-serif;
+            border-bottom: 1px solid #292929;
 
-    font-size: clamp(55px, 9vw, 125px);
-    line-height: 0.87;
+            display: flex;
 
-    letter-spacing: -6px;
+            align-items: center;
 
-    text-transform: uppercase;
-}
+            justify-content: space-between;
+        }
 
-h1 span {
-    color: #e71920;
-}
 
-.intro {
-    margin: 35px 0 60px;
+        .logo {
+            color: white;
 
-    color: #999;
+            text-decoration: none;
 
-    font-size: 20px;
-}
+            font-family: "Archivo Black", Impact, sans-serif;
 
-.intro strong {
-    color: white;
-}
+            font-size: 25px;
 
-/* MENÜ */
+            letter-spacing: -1px;
+        }
 
-.menu {
-    display: grid;
 
-    grid-template-columns: 1fr 1fr;
+        .logo span {
+            color: #e71920;
 
-    gap: 15px;
-}
+            margin-left: 5px;
+        }
 
-.menu-card {
-    min-height: 300px;
 
-    padding: 30px;
+        .tagline {
+            color: #666;
 
-    position: relative;
+            font-size: 10px;
 
-    overflow: hidden;
+            font-weight: 900;
 
-    color: white;
-    text-decoration: none;
+            letter-spacing: 1.5px;
+        }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-    transition:
-        transform 0.2s ease,
-        filter 0.2s ease;
-}
+        /* =========================
+           FŐOLDAL
+        ========================= */
 
-.menu-card:hover {
-    transform: translateY(-7px);
+        .hero {
+            max-width: 1400px;
 
-    filter: brightness(1.12);
-}
+            margin: auto;
 
-.menu-card.red {
-    background: #e71920;
-}
+            padding: 10vh 5vw 8vh;
+        }
 
-.menu-card.black {
-    background: #151515;
 
-    border: 1px solid #333;
-}
+        .eyebrow {
+            color: #e71920;
 
-.card-number {
-    font-size: 13px;
+            margin-bottom: 25px;
 
-    font-weight: 900;
+            font-size: 11px;
 
-    opacity: 0.65;
-}
+            font-weight: 900;
 
-.card-content h2 {
-    max-width: 650px;
+            letter-spacing: 2px;
 
-    margin: 0 0 18px;
+            text-transform: uppercase;
+        }
 
-    font-family: "Archivo Black", Impact, sans-serif;
 
-    font-size: clamp(27px, 3vw, 44px);
+        /* =========================
+           FŐCÍM + KÉP
+        ========================= */
 
-    line-height: 0.95;
+        .hero-main {
+            display: grid;
 
-    letter-spacing: -2px;
+            grid-template-columns: 1fr 600px;
 
-    text-transform: uppercase;
-}
+            align-items: center;
 
-.card-content p {
-    max-width: 560px;
+            gap: 50px;
+        }
 
-    margin: 0;
 
-    color: rgba(255,255,255,0.7);
+        .hero-text {
+            min-width: 0;
+        }
 
-    font-size: 15px;
 
-    line-height: 1.5;
-}
+        h1 {
+            margin: 0;
 
-.arrow {
-    position: absolute;
+            font-family: "Archivo Black", Impact, sans-serif;
 
-    right: 25px;
-    bottom: 15px;
+            font-size: clamp(55px, 7vw, 110px);
 
-    font-size: 45px;
+            line-height: 0.87;
 
-    font-weight: 900;
-}
+            letter-spacing: -6px;
 
-/* FOOTER */
+            text-transform: uppercase;
+        }
 
-footer {
-    max-width: 1200px;
 
-    margin: auto;
+        h1 span {
+            color: #e71920;
+        }
 
-    padding: 30px 5vw 45px;
 
-    border-top: 1px solid #292929;
+        .intro {
+            margin: 35px 0 0;
 
-    display: flex;
+            color: #999;
 
-    justify-content: space-between;
+            font-size: 20px;
 
-    color: #555;
+            line-height: 1.5;
+        }
 
-    font-size: 10px;
 
-    font-weight: 900;
+        .intro strong {
+            color: white;
+        }
 
-    letter-spacing: 1px;
-}
 
-/* MOBIL */
+        /* =========================
+           VERFISH KÉP
+        ========================= */
 
-@media (max-width: 750px) {
+        .hero-photo {
+            width: 600px;
 
-    .topbar {
-        height: 68px;
-    }
+            height: 553px;
 
-    .tagline {
-        display: none;
-    }
+            object-fit: cover;
 
-    .hero {
-        padding-top: 10vh;
-    }
+            display: block;
 
-    h1 {
-        letter-spacing: -3px;
-    }
+            border: 1px solid #292929;
 
-    .menu {
-        grid-template-columns: 1fr;
-    }
+            transition:
+                transform 0.25s ease,
+                filter 0.25s ease;
+        }
 
-    .menu-card {
-        min-height: 240px;
-    }
 
-    footer {
-        flex-direction: column;
+        .hero-photo:hover {
+            transform: scale(1.015);
 
-        gap: 10px;
-    }
+            filter: brightness(1.08);
+        }
 
-}
 
-</style>
+        /* =========================
+           MENÜ
+        ========================= */
+
+        .menu {
+            margin-top: 65px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+
+        .menu-card {
+            min-height: 300px;
+
+            padding: 30px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            color: white;
+
+            text-decoration: none;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition:
+                transform 0.2s ease,
+                filter 0.2s ease;
+        }
+
+
+        .menu-card:hover {
+            transform: translateY(-7px);
+
+            filter: brightness(1.12);
+        }
+
+
+        .menu-card.red {
+            background: #e71920;
+        }
+
+
+        .menu-card.black {
+            background: #151515;
+
+            border: 1px solid #333;
+        }
+
+
+        .card-number {
+            font-size: 13px;
+
+            font-weight: 900;
+
+            opacity: 0.65;
+        }
+
+
+        .card-content h2 {
+            max-width: 650px;
+
+            margin: 0 0 18px;
+
+            font-family: "Archivo Black", Impact, sans-serif;
+
+            font-size: clamp(27px, 3vw, 44px);
+
+            line-height: 0.95;
+
+            letter-spacing: -2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .card-content p {
+            max-width: 560px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,0.7);
+
+            font-size: 15px;
+
+            line-height: 1.5;
+        }
+
+
+        .arrow {
+            position: absolute;
+
+            right: 25px;
+
+            bottom: 15px;
+
+            font-size: 45px;
+
+            font-weight: 900;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding: 30px 5vw 45px;
+
+            border-top: 1px solid #292929;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #555;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .hero-main {
+                grid-template-columns: 1fr 450px;
+
+                gap: 35px;
+            }
+
+
+            .hero-photo {
+                width: 450px;
+
+                height: 415px;
+            }
+
+        }
+
+
+        /* =========================
+           MOBIL
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            .topbar {
+                height: 68px;
+            }
+
+
+            .tagline {
+                display: none;
+            }
+
+
+            .hero {
+                padding-top: 8vh;
+            }
+
+
+            .hero-main {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+
+            h1 {
+                letter-spacing: -3px;
+            }
+
+
+            .hero-photo {
+                width: 100%;
+
+                height: auto;
+
+                max-height: 553px;
+
+                object-fit: cover;
+            }
+
+
+            .menu {
+                grid-template-columns: 1fr;
+
+                margin-top: 45px;
+            }
+
+
+            .menu-card {
+                min-height: 240px;
+            }
+
+
+            .card-content h2 {
+                font-size: 30px;
+            }
+
+
+            footer {
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+        }
+
+
+        /* =========================
+           KIS MOBIL
+        ========================= */
+
+        @media (max-width: 450px) {
+
+            h1 {
+                font-size: 50px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .hero-photo {
+                max-height: 420px;
+            }
+
+
+            .menu-card {
+                padding: 25px;
+
+                min-height: 220px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<header class="topbar">
 
-    <a href="#" class="logo">
-        F1<span>SHITPOST</span>
-    </a>
+    <!-- =========================
+         FEJLÉC
+    ========================= -->
 
-    <div class="tagline">
-        NEM HIVATALOS · NEM OBJEKTÍV · NEM IS AKAR AZ LENNI
-    </div>
+    <header class="topbar">
 
-</header>
-
-
-<main class="hero">
-
-    <div class="eyebrow">
-        A PADDOCK LEGNAGYOBB IGAZSÁGMONDÓJA
-    </div>
+        <a href="index.html" class="logo">
+            F1<span>SHITPOST</span>
+        </a>
 
 
-    <div class="hero-main">
+        <div class="tagline">
+            NEM HIVATALOS · NEM OBJEKTÍV · NEM IS AKAR AZ LENNI
+        </div>
 
-    <div class="hero-text">
-
-        <h1>
-            Aki nem olvassa<br>
-            <span>az tuti buzi</span>
-        </h1>
-
-        <p class="intro">
-            Forma–1, ahogy annak lennie kellene:
-            <strong>szűrő nélkül.</strong>
-        </p>
-
-    </div>
-
-    <img
-        src="images/verfish.jpg"
-        alt="F1 truthbombing"
-        class="hero-photo"
-    >
-
-</div>
+    </header>
 
 
-    <section class="menu">
+
+    <!-- =========================
+         FŐ TARTALOM
+    ========================= -->
+
+    <main class="hero">
 
 
-        <!-- 1. MENÜ -->
+        <div class="eyebrow">
+            A PADDOCK LEGNAGYOBB IGAZSÁGMONDÓJA
+        </div>
 
-        <a href="velemenyek.html" class="menu-card red">
 
-            <div class="card-number">
-                01
-            </div>
 
-            <div class="card-content">
+        <!-- FŐCÍM + VERFISH -->
 
-                <h2>
-                    Az igazi véleményvezér véleményei
-                </h2>
+        <div class="hero-main">
 
-                <p>
-                    Vélemények, amelyekre senki nem kérdezett rá,
-                    de mindenki meg fogja bánni, hogy elolvasta.
+
+            <div class="hero-text">
+
+                <h1>
+                    Aki nem olvassa<br>
+                    <span>az tuti buzi</span>
+                </h1>
+
+
+                <p class="intro">
+                    Forma–1, ahogy annak lennie kellene:
+                    <strong>szűrő nélkül.</strong>
                 </p>
 
             </div>
 
-            <div class="arrow">
-                →
-            </div>
-
-        </a>
 
 
-        <!-- 2. MENÜ -->
-
-        <a href="futamelemzes.html" class="menu-card black">
-
-            <div class="card-number">
-                02
-            </div>
-
-            <div class="card-content">
-
-                <h2>
-                    Futamelemzés a legkomolyabb véleményvezértől
-                </h2>
-
-                <p>
-                    Köridők, stratégia, káosz és teljesen
-                    indokolatlan magabiztosság.
-                </p>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        </a>
+            <img
+                src="images/verfish.jpg"
+                alt="F1 Shitpost"
+                class="hero-photo"
+            >
 
 
-    </section>
-
-</main>
+        </div>
 
 
-<footer>
 
-    <span>
-        © 2026 F1 SHITPOST
-    </span>
+        <!-- =========================
+             MENÜ
+        ========================= -->
 
-    <span>
-        0% objektivitás · 100% vélemény
-    </span>
+        <section class="menu">
 
-</footer>
+
+            <!-- VÉLEMÉNYEK -->
+
+            <a
+                href="velemenyek.html"
+                class="menu-card red"
+            >
+
+                <div class="card-number">
+                    01
+                </div>
+
+
+                <div class="card-content">
+
+                    <h2>
+                        Az igazi véleményvezér véleményei
+                    </h2>
+
+
+                    <p>
+                        Vélemények, amelyekre senki nem kérdezett rá,
+                        de mindenki meg fogja bánni, hogy elolvasta.
+                    </p>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+
+            <!-- FUTAMELEMZÉS -->
+
+            <a
+                href="futamelemzes.html"
+                class="menu-card black"
+            >
+
+                <div class="card-number">
+                    02
+                </div>
+
+
+                <div class="card-content">
+
+                    <h2>
+                        Futamelemzés a legkomolyabb véleményvezértől
+                    </h2>
+
+
+                    <p>
+                        Köridők, stratégia, káosz és teljesen
+                        indokolatlan magabiztosság.
+                    </p>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <span>
+            © 2026 F1 SHITPOST
+        </span>
+
+
+        <span>
+            0% objektivitás · 100% vélemény
+        </span>
+
+    </footer>
+
 
 </body>
+
 </html>
+```
