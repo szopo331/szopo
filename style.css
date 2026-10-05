@@ -1018,3 +1018,292 @@ footer {
     }
 
 }
+
+```css
+/* =========================
+   CIKK OLDAL
+========================= */
+
+.article-page {
+    width: min(900px, 92%);
+
+    margin: 0 auto;
+
+    padding: 8vh 0 10vh;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+.article-page h1 {
+    margin: 20px 0;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+
+    font-size: clamp(48px, 7vw, 88px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    text-transform: uppercase;
+}
+
+
+.article-page h1 span {
+    color: #e71920;
+}
+
+
+.article-meta {
+    color: #666;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.article-lead {
+    margin: 45px 0;
+
+    padding: 25px 30px;
+
+    border-left: 4px solid #e71920;
+
+    background: #111;
+
+    color: #ddd;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+.article-page section {
+    margin-top: 55px;
+}
+
+
+.article-page section h2 {
+    margin: 0 0 20px;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+
+    letter-spacing: -1.5px;
+}
+
+
+.article-page section p {
+    margin: 0 0 20px;
+
+    color: #c3c3c3;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+}
+
+
+.article-page section p strong {
+    color: white;
+}
+
+
+.article-page blockquote {
+    margin: 35px 0;
+
+    padding: 25px 30px;
+
+    background: #151515;
+
+    border-left: 4px solid #e71920;
+
+    color: white;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.1;
+}
+
+
+/* =========================
+   IGAZSÁGBOMBA
+========================= */
+
+.truth-bomb-article {
+    margin: 70px 0 !important;
+
+    padding: 40px;
+
+    background: #e71920;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.truth-bomb-article::after {
+    content: "TRUTHNUKE";
+
+    position: absolute;
+
+    right: -35px;
+    bottom: -35px;
+
+    font-family: "Archivo Black", Impact, sans-serif;
+
+    font-size: 100px;
+
+    line-height: 1;
+
+    opacity: 0.08;
+
+    transform: rotate(-10deg);
+}
+
+
+.truth-bomb-article h2 {
+    position: relative;
+
+    z-index: 1;
+
+    font-size: 45px !important;
+}
+
+
+.truth-bomb-article p {
+    position: relative;
+
+    z-index: 1;
+
+    color: rgba(255,255,255,0.85) !important;
+}
+
+
+.article-bomb-number {
+    position: relative;
+
+    z-index: 1;
+
+    margin-bottom: 15px;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.article-back {
+    margin-top: 65px;
+}
+
+
+/* =========================
+   CIKK MOBIL
+========================= */
+
+@media (max-width: 750px) {
+
+    .article-page {
+        width: 92%;
+
+        padding-top: 6vh;
+    }
+
+
+    .article-page h1 {
+        font-size: 52px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .article-lead {
+        margin: 35px 0;
+
+        padding: 20px;
+
+        font-size: 18px;
+    }
+
+
+    .article-page section {
+        margin-top: 45px;
+    }
+
+
+    .article-page section h2 {
+        font-size: 31px;
+    }
+
+
+    .article-page section p {
+        font-size: 16px;
+
+        line-height: 1.65;
+    }
+
+
+    .article-page blockquote {
+        padding: 20px;
+
+        font-size: 23px;
+    }
+
+
+    .truth-bomb-article {
+        padding: 28px 22px;
+    }
+
+
+    .truth-bomb-article h2 {
+        font-size: 34px !important;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .article-page h1 {
+        font-size: 43px;
+    }
+
+
+    .article-page section h2 {
+        font-size: 28px;
+    }
+
+
+    .article-page section p {
+        font-size: 15px;
+    }
+
+
+    .article-page blockquote {
+        font-size: 20px;
+    }
+
+}
+```
+
