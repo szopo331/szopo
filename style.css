@@ -121,3 +121,259 @@ footer{width:min(1500px,92%);margin:0 auto;padding:30px 0 45px;border-top:1px so
         height: 220px;
     }
 }
+
+
+/* =========================
+   FUTAMONKÉNTI ÉRTÉKELÉS – OLDALSÓ FÜL
+========================= */
+
+.race-rating-tab {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    width: 54px;
+    min-height: 190px;
+    padding: 16px 9px;
+    background: #e71920;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-right: 1px solid rgba(255,255,255,.2);
+    box-shadow: 8px 0 25px rgba(0,0,0,.3);
+    transition: width .2s ease, filter .2s ease;
+}
+
+.race-rating-tab:hover {
+    width: 72px;
+    filter: brightness(1.1);
+}
+
+.race-rating-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.race-rating-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: "Archivo Black", Impact, sans-serif;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+.race-rating-arrow {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+@media (max-width: 750px) {
+    .race-rating-tab {
+        top: auto;
+        bottom: 18px;
+        transform: none;
+        width: 52px;
+        min-height: 52px;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .race-rating-tab:hover {
+        width: 60px;
+    }
+
+    .race-rating-label {
+        display: none;
+    }
+
+    .race-rating-icon {
+        font-size: 20px;
+    }
+
+    .race-rating-arrow {
+        font-size: 16px;
+    }
+}
+
+/* =========================
+   PILÓTAÉRTÉKELÉSEK
+========================= */
+
+.rating-page {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 9vh 0 10vh;
+    position: relative;
+    z-index: 1;
+}
+
+.rating-header {
+    max-width: 900px;
+    margin-bottom: 55px;
+}
+
+.rating-header h1 {
+    margin: 0;
+}
+
+.rating-intro {
+    max-width: 720px;
+    margin: 28px 0 0;
+    color: #999;
+    font-size: 18px;
+}
+
+.rating-race {
+    margin-top: 35px;
+    border: 1px solid #292929;
+    background: #111;
+}
+
+.rating-race-head {
+    padding: 24px 28px;
+    border-bottom: 1px solid #292929;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.rating-race-number {
+    color: #e71920;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.rating-race-title {
+    margin: 5px 0 0;
+    font-family: "Archivo Black", Impact, sans-serif;
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: .95;
+    text-transform: uppercase;
+}
+
+.rating-race-subtitle {
+    color: #666;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+.driver-ratings {
+    display: grid;
+    gap: 1px;
+    background: #292929;
+}
+
+.driver-rating {
+    background: #151515;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 55px minmax(170px, 1fr) 95px minmax(220px, 1.5fr);
+    gap: 22px;
+    align-items: center;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.driver-rating:hover {
+    background: #1b1b1b;
+}
+
+.driver-position {
+    color: #555;
+    font-family: "Archivo Black", Impact, sans-serif;
+    font-size: 24px;
+}
+
+.driver-name {
+    font-family: "Archivo Black", Impact, sans-serif;
+    font-size: 22px;
+    line-height: .95;
+    text-transform: uppercase;
+}
+
+.driver-verdict {
+    color: #e71920;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.driver-score {
+    font-family: "Archivo Black", Impact, sans-serif;
+    font-size: 30px;
+    text-align: right;
+}
+
+.driver-comment {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.rating-legend {
+    margin-top: 22px;
+    color: #555;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+    .driver-rating {
+        grid-template-columns: 45px 1fr 75px;
+    }
+
+    .driver-comment {
+        grid-column: 2 / -1;
+    }
+
+    .driver-score {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .rating-page {
+        padding-top: 7vh;
+    }
+
+    .rating-race-head {
+        padding: 20px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rating-race-subtitle {
+        text-align: left;
+    }
+
+    .driver-rating {
+        grid-template-columns: 38px 1fr;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .driver-score {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: right;
+    }
+
+    .driver-comment {
+        grid-column: 2;
+    }
+}
