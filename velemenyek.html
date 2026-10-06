@@ -11,6 +11,41 @@
 
     <link rel="stylesheet" href="style.css">
 
+
+
+<style>
+.page .article {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.page .article-image {
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #333;
+}
+
+.page .article-content {
+    min-width: 0;
+}
+
+@media (max-width: 750px) {
+    .page .article {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .page .article-image {
+        width: 100%;
+        height: 220px;
+    }
+}
+</style>
+
 </head>
 
 
@@ -59,6 +94,10 @@
 
        <a href="antonelli.html" class="article">
 
+            <img src="images/gimi.jpg" alt="Antonelli" class="article-image">
+
+            <div class="article-content">
+
             <div class="article-number">
                 01 · A finn jégemberről lehullik a lepel
             </div>
@@ -72,6 +111,8 @@
                 A Sepangi futam után ideje végre kimondani azt,
                 amit mindenki gondol, csak fél leírni.
             </p>
+
+            </div>
 
         </a>
 
